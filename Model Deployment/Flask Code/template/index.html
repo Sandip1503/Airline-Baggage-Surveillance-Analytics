@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Operator Performance</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid bg-info text-white text-center" style="background-color:#aaa;">
+        <div class="container">
+            <h1 id="hea">L2 Operator Performance</h1>
+            <P class="lead py-2">
+                Find out L2 Operator Performance here!
+            </P>
+        </div>
+    </div>
+    </nav>
+    <section>
+        <div>
+
+        </div>
+        </div>
+        <div class="container mb-3 py-6">
+            <h2 class="text-center">Enter all the required parameters for prediction</h2>
+            <form method="POST" action="/predict">
+                <!-- L2LoginID	L2Decision	 L2_Op_Time -->
+                <div class="form-group">
+                    <label for="L2LoginID">Enter L2LoginID</label>
+                    <input type="L2LoginID" class="form-control" style="width:470px;" id="L2LoginID" name="L2LoginID" placeholder="Example: 32661"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="L2Decision">Enter L2Decision</label>
+                    <input type="L2Decision" class="form-control" style="width:470px;" id="L2Decision" name="L2Decision" placeholder="Example: 2"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="L2_Op_Time">Enter L2_Op_Time</label>
+                    <input type="L2_Op_Time" class="form-control" style="width:470px;" id="L2_Op_Time" name="L2_Op_Time" placeholder="Example: 27"
+                        required>
+                </div>
+                <center><button class="btn btn-primary" type="submit">Predict</button></center>
+            </form>
+        </div>
+        <div class="container text-center" id="prev">
+            <h2 class="display-6 text-center">Operator Performance is: {{pred_name}}</h2>
+            <br>
+            
+            <img src="/static/{{prediction}}">
+        </div>
+    </section>
+    <h2 class='text-center'>Team 1 </h2> 
+    <div class="container">
+
+
+        <br>
+        <br>
+    </div>
+    <br>
+    <br>
+
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center padding" id="con">
+                <div class="col-12">
+                    <h3 class="display-4"> </h3>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
