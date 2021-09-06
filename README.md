@@ -10,4 +10,7 @@ Some of the data insigts..
 
 
 ![1_Hist_MVXR VS No  of Bags](https://user-images.githubusercontent.com/87111271/132252015-fed5bc2d-df27-4ce0-b2a6-d813c0c9ad77.jpg)
+Machine vs Bags Count
+
+
 
